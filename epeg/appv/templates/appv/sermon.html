@@ -3,8 +3,7 @@
 
 {% block appv-styles %}
     {% include 'appv/parts/styles.html' %}
-    {% load static %}
-    <link rel="stylesheet" href="{% static 'appv/css/style.caroussel.css' %}" >
+    {% include 'appv/parts/styles-caroussel.html' %} 
     {% include 'appv/parts/styles-sermon.html' %}
 {% endblock %}
 
