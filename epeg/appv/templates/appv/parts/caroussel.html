@@ -1,5 +1,6 @@
 <!-- Carousel Wrapper -->
 {% load static %}
+{% load extras %}		 
 <div id="carousel-example-3" class="carousel slide carousel-fade" data-ride="carousel" data-interval="false">
 
     <!-- Indicators -->
@@ -14,7 +15,7 @@
     <div class="carousel-inner" role="listbox">
 
         <!-- First slide -->
-        <div class="carousel-item active" style="background-image: url({% static 'appv/img/caroussel/IMG_004_1900x1080.jpg' %});">
+        <div class="carousel-item active" style="background-image: url({{ STATIC_URL|concat_string:'/img/caroussel/IMG_004_1900x1080.jpg' }});">
             <!-- Mask -->
             <div class="view">
                 <div
@@ -34,7 +35,7 @@
         <!-- First slide -->
 
         <!-- Second slide -->
-        <div class="carousel-item" style="background-image: url({% static 'appv/img/caroussel/IMG_001_1900x1080.jpg' %});">
+        <div class="carousel-item" style="background-image: url({{ STATIC_URL|concat_string:'/img/caroussel/IMG_001_1900x1080.jpg' }});">
             <!-- Mask -->
             <div class="view">
                 <div
@@ -52,7 +53,7 @@
         <!-- Second slide -->
 
         <!-- Third slide -->
-        <div class="carousel-item" style="background-image: url({% static 'appv/img/caroussel/IMG_003_1900x1080.jpg' %});">
+        <div class="carousel-item" style="background-image: url({{ STATIC_URL|concat_string:'/img/caroussel/IMG_003_1900x1080.jpg' }});">
             <!-- Mask -->
             <div class="view">
                 <div

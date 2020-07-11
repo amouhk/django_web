@@ -1,5 +1,6 @@
 <!-- Main content -->
 {% load static %}
+{% load extras %}				 
 <main>
 
     <div class="container">
@@ -101,7 +102,7 @@
                     <div class="icon-area">
                         <div class="circle-icon">
                             <a href="http://www.reseaufef.com/" target="_blank">
-                                <img width="70%" src="{% static 'appv/img/logo/reseau_fef_logo.png' %}"
+                                <img width="70%" src="{{ STATIC_URL|concat_string:'/img/logo/reseau_fef_logo.png' }}"
                                      alt="Reseau FEF">
                             </a>
                         </div>
@@ -119,7 +120,7 @@
                     <div class="icon-area">
                         <div class="circle-icon">
                             <a href="https://www.lecnef.org/" target="_blank">
-                                <img width="50%" src="{% static 'appv/img/logo/cnef_logo2.jpeg' %}" alt="CNEF">
+                                <img width="50%" src="{{ STATIC_URL|concat_string:'/img/logo/cnef_logo2.jpeg' }}" alt="CNEF">
                             </a>
                         </div>
                         <br>
@@ -137,7 +138,7 @@
                     <div class="icon-area">
                         <div class="circle-icon">
                             <a href="https://www.caef.net/" target="_blank">
-                                <img width="50%" src="{% static 'appv/img/logo/caef_logo.png' %}" alt="CAEF">
+                                <img width="50%" src="{{ STATIC_URL|concat_string:'/img/logo/caef_logo.png' }}" alt="CAEF">
                             </a>
                         </div>
                         <br>

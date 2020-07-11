@@ -41,7 +41,6 @@
                 <!-- Grid column -->
                 {% for photo in photos %}
                 <div class="mb-3 pics animation all {{ photo.album }}">
-                    <!--img class="img-fluid" src="{% static 'appv/'|concat_string:photo.filepath %}"-->
                     <img class="img-fluid" src="{{ MEDIA_URL|concat_string:photo.filepath }}"
                          alt="{{ photo.name }}">
                 </div>

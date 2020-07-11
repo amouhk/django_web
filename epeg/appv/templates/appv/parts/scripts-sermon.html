@@ -1,28 +1,29 @@
 {% load static %}
+{% load extras %}
 <!-- JQuery -->
-<script type="text/javascript" src="{% static 'appv/js/jquery-3.4.1.min.js' %}"></script>
+<script type="text/javascript" src="{{ STATIC_URL|concat_string:'/js/jquery-3.4.1.min.js' }}"></script>
 <!-- Bootstrap tooltips -->
-<script type="text/javascript" src="{% static 'appv/js/popper.min.js' %}"></script>
+<script type="text/javascript" src="{{ STATIC_URL|concat_string:'/js/popper.min.js' }}"></script>
 <!-- Bootstrap core JavaScript -->
-<script type="text/javascript" src="{% static 'appv/js/bootstrap.min.js' %}"></script>
+<script type="text/javascript" src="{{ STATIC_URL|concat_string:'/js/bootstrap.min.js' }}"></script>
 <!-- MDB core JavaScript -->
-<script type="text/javascript" src="{% static 'appv/js/mdb.min.js' %}"></script>
+<script type="text/javascript" src="{{ STATIC_URL|concat_string:'/js/mdb.min.js' }}"></script>
 
 
 <!-- jPList core js -->
-<script type="text/javascript" src="{% static 'appv/js/jplist.core.min.js' %}"></script>
+<script type="text/javascript" src="{{ STATIC_URL|concat_string:'/js/jplist.core.min.js' }}"></script>
 <!-- jPList sort bundle -->
-<script type="text/javascript" src="{% static 'appv/js/jplist.sort-bundle.min.js' %}"></script>
+<script type="text/javascript" src="{{ STATIC_URL|concat_string:'/js/jplist.sort-bundle.min.js' }}"></script>
 <!-- jPList textbox filter control -->
-<script type="text/javascript" src="{% static 'appv/js/jplist.textbox-filter.min.js' %}"></script>
+<script type="text/javascript" src="{{ STATIC_URL|concat_string:'/js/jplist.textbox-filter.min.js' }}"></script>
 <!-- jPList toggle bundle-->
-<script type="text/javascript" src="{% static 'appv/js/jplist.filter-toggle-bundle.min.js' %}"></script>
+<script type="text/javascript" src="{{ STATIC_URL|concat_string:'/js/jplist.filter-toggle-bundle.min.js' }}"></script>
 <!-- filter dropdown bundle-->
-<script type="text/javascript" src="{% static 'appv/js/jplist.filter-dropdown-bundle.min.js' %}"></script>
+<script type="text/javascript" src="{{ STATIC_URL|concat_string:'/js/jplist.filter-dropdown-bundle.min.js' }}"></script>
 <!-- jQuery UI -->
-<script type="text/javascript" src="https://code.jquery.com/ui/1.12.0-rc.1/jquery-ui.min.js' %}"></script>
+<script type="text/javascript" src="https://code.jquery.com/ui/1.12.0-rc.1/jquery-ui.min.js' }}"></script>
 <!-- jPList jQuery UI bundle js -->
-<script type="text/javascript" src="{% static 'appv/js/jplist.jquery-ui-bundle.min.js' %}"></script>
+<script type="text/javascript" src="{{ STATIC_URL|concat_string:'/js/jplist.jquery-ui-bundle.min.js' }}"></script>
 
 
 <script>
