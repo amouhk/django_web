@@ -1,8 +1,8 @@
 {% extends "appv_admin/base.html" %}
 {% load static %}
-
+{% load extras %}
 {% block admin-styles %}
-<link rel="stylesheet" href="{% static 'appv_admin/css/style.css' %}">
+<link rel="stylesheet" href="{{ STATIC_URL|concat_string:'/css/style.css' }}">
 <style>
     span {
     color : white;
@@ -16,9 +16,9 @@
 {% block admin-scripts %}
 {% load static %}
 <!-- DataTables  -->
-<script type="text/javascript" src="{% static 'appv_admin/js/addons/datatables.min.js' %}"></script>
+<script type="text/javascript" src="{{ STATIC_URL|concat_string:'/js/addons/datatables.min.js' }}"></script>
 <!-- DataTables Select  -->
-<script type="text/javascript" src="{% static 'appv_admin/js/addons/datatables-select.min.js' %}"></script>
+<script type="text/javascript" src="{{ STATIC_URL|concat_string:'/js/addons/datatables-select.min.js' }}"></script>
 <!-- Custom scripts -->
 <script>
   $(document).ready(function() {
@@ -30,7 +30,7 @@
     //$('.file-upload').file_upload();
     $("input:first").addClass("white-text");
 
-    $("#mdb-lightbox-ui").load("{% static 'appv_admin/mdb-addons/mdb-lightbox-ui.html' %}");
+    $("#mdb-lightbox-ui").load("{{ STATIC_URL|concat_string:'/mdb-addons/mdb-lightbox-ui.html' }}");
   });
 
 
