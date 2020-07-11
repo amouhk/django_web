@@ -15,6 +15,8 @@ from django.http import HttpResponseRedirect
 # Create your views here.
 
 def login(request):
+    STATIC_URL = conf_settings.STATIC_SERVER + conf_settings.STATIC_ADMIN
+
     # Mail sending request
     if request.method == 'POST':
         # create a form instance and populate it with data from the request:
@@ -44,11 +46,14 @@ def login(request):
 
 @login_required
 def logout(request):
+    STATIC_URL = conf_settings.STATIC_SERVER + conf_settings.STATIC_ADMIN
+
     auth.logout(request)
     return HttpResponseRedirect("/appv_admin/login")
 
 @login_required
 def home(request):
+    STATIC_URL = conf_settings.STATIC_SERVER + conf_settings.STATIC_ADMIN
     CHURCH_NAME = conf_settings.CHURCH_NAME
 
     if request.method == 'POST':
@@ -72,6 +77,7 @@ def home(request):
 
 @login_required
 def sermon(request):
+    STATIC_URL = conf_settings.STATIC_SERVER + conf_settings.STATIC_ADMIN
     form = SermonForm()
 
     if request.method == 'GET':
@@ -127,7 +133,9 @@ def sermon(request):
 
 @login_required
 def agenda(request):
-    MEDIA_URL = conf_settings.MEDIA_SERVER + conf_settings.MEDIA_URL 
+    MEDIA_URL = conf_settings.MEDIA_SERVER + conf_settings.MEDIA_URL
+    STATIC_URL = conf_settings.STATIC_SERVER + conf_settings.STATIC_ADMIN
+
     agendas = Agenda.objects.order_by('date')
     agenda_current = Agenda.objects.all()[:1].get()
     form = AgendaForm()
@@ -145,7 +153,8 @@ def agenda(request):
 
 @login_required
 def gallery(request):
-    MEDIA_URL = conf_settings.MEDIA_SERVER + conf_settings.MEDIA_URL 
+    MEDIA_URL = conf_settings.MEDIA_SERVER + conf_settings.MEDIA_URL
+    STATIC_URL = conf_settings.STATIC_SERVER + conf_settings.STATIC_ADMIN 
 
     form = GalleryForm()
     if request.method == 'POST':

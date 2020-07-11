@@ -160,6 +160,8 @@ STATIC_URL = '/static/'
 STATIC_ROOT = '/share/CACHEDEV1_DATA/Web/static/'
 
 STATIC_SERVER = "http://82.64.149.128"
+STATIC_APP = '/static_app/'
+STATIC_ADMIN = '/static_admin/'
 
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, "static"),

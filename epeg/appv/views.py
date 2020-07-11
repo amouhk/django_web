@@ -20,7 +20,7 @@ from django import http
 
 def home(request):
     MEDIA_URL = conf_settings.MEDIA_SERVER + conf_settings.MEDIA_URL
-    STATIC_URL = conf_settings.STATIC_SERVER + conf_settings.STATIC_URL
+    STATIC_URL = conf_settings.STATIC_SERVER + conf_settings.STATIC_APP
    
     sermon_latest = Predication.objects.order_by('date').reverse()[0]
     return render(request, 'appv/index.html', locals())
@@ -29,7 +29,7 @@ def home(request):
 def about(request):
     welcome = conf_settings.WELCOME_MSG
     MEDIA_URL = conf_settings.MEDIA_SERVER + conf_settings.MEDIA_URL
-    STATIC_URL = conf_settings.STATIC_SERVER + conf_settings.STATIC_URL
+    STATIC_URL = conf_settings.STATIC_SERVER + conf_settings.STATIC_APP
 
 
     # Mail sending request
@@ -82,7 +82,7 @@ def about(request):
 def activity(request):
     welcome = conf_settings.WELCOME_MSG
     MEDIA_URL = conf_settings.MEDIA_SERVER + conf_settings.MEDIA_URL
-    STATIC_URL = conf_settings.STATIC_SERVER + conf_settings.STATIC_URL
+    STATIC_URL = conf_settings.STATIC_SERVER + conf_settings.STATIC_APP
 
     agenda_current = Agenda.objects.all()[:1].get()
     return render(request, 'appv/activity.html', locals())
@@ -91,7 +91,7 @@ def activity(request):
 def gallery(request):
     welcome = conf_settings.WELCOME_MSG
     MEDIA_URL = conf_settings.MEDIA_SERVER + conf_settings.MEDIA_URL
-    STATIC_URL = conf_settings.STATIC_SERVER + conf_settings.STATIC_URL
+    STATIC_URL = conf_settings.STATIC_SERVER + conf_settings.STATIC_APP
 
     albums = Gallery.objects.values('album').distinct()
     photos = Gallery.objects.filter(type="Photo")
@@ -102,7 +102,7 @@ def gallery(request):
 def sermon(request):
     welcome = conf_settings.WELCOME_MSG
     MEDIA_URL = conf_settings.MEDIA_SERVER + conf_settings.MEDIA_URL
-    STATIC_URL = conf_settings.STATIC_SERVER + conf_settings.STATIC_URL
+    STATIC_URL = conf_settings.STATIC_SERVER + conf_settings.STATIC_APP
 
     sermons = Predication.objects.order_by('date').reverse()
     device_mobile = 0
