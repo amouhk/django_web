@@ -1,31 +1,31 @@
 {% load static %}
-
+{% load extras %}
 <section class="">
 <div class="container mt-4 mb-4 h-100 d-flex justify-content-center align-items-center">
 <div class="row">
   <div class="col-sm-12 mb-3 mb-md-0">
 
     <a href="https://evangile21.thegospelcoalition.org/" target="_blank">
-      <img src="{% static 'appv/img/logo/logo-E21-screen-1024x263.png' %}" alt="" style="width:200px;">
+      <img src="{{ STATIC_URL|concat_string:'/img/logo/logo-E21-screen-1024x263.png' }}" alt="" style="width:200px;">
     </a>
 
     <a href="https://toutpoursagloire.com/podcasts/" target="_blank">
-      <img src="{% static 'appv/img/logo/logo-tpsg.webp' %}" alt="" style="width:150px;">
+      <img src="{{ STATIC_URL|concat_string:'/img/logo/logo-tpsg.webp' }}" alt="" style="width:150px;">
     </a>
 
     <a href="https://audiobibleibg.com/" target="_blank">
-      <img src="{% static 'appv/img/logo/IBG-audio-logo.png' %}" alt="" style="width:275px;">
+      <img src="{{ STATIC_URL|concat_string:'/img/logo/IBG-audio-logo.png' }}" alt="" style="width:275px;">
     </a>
     <a href="http://flte.fr/" target="_blank">
-      <img src="{% static 'appv/img/logo/FLTE-logo.png' %}" alt="" style="width:200px;">
+      <img src="{{ STATIC_URL|concat_string:'/img/logo/FLTE-logo.png' }}" alt="" style="width:200px;">
     </a>
 
     <a href="https://www.portesouvertes.fr/" target="_blank">
-      <img src="{% static 'appv/img/logo/po-rvb-left-logo.png' %}" alt="" style="width:250px;">
+      <img src="{{ STATIC_URL|concat_string:'/img/logo/po-rvb-left-logo.png' }}" alt="" style="width:250px;">
     </a>
 
     <!--a href="https://ajc.caef.net/" target="_blank">
-      <img src="{% static 'appv/img/logo/ajc_caef_logo.jpg' %}" alt="" style="width:150px;">
+      <img src="{{ STATIC_URL|concat_string:'/img/logo/ajc_caef_logo.jpg' %}" alt="" style="width:150px;">
     </a-->
   </div>
 

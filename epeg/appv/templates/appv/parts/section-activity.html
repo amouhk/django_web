@@ -1,5 +1,6 @@
 <!-- Main content -->
 {% load static %}
+{% load extras %}				 
 <main>
 
     <div class="container">
@@ -135,7 +136,7 @@
                 <!-- Grid column -->
                 <div class="col-lg-6 col-md-12 mb-3 wow fadeIn" data-wow-delay="0.4s">
                     <!-- Image -->
-                    <img src="{% static 'appv/img/lightbox/003_bible_700x400.jpg' %}"
+                    <img src="{{ STATIC_URL|concat_string:'/img/lightbox/003_bible_700x400.jpg' }}"
                          class="img-fluid rounded" alt="etudebible">
                 </div>
                 <!-- Grid column -->
@@ -197,7 +198,7 @@
                 <div class="col-lg-5 col-md-12 mt-md-4 mt-lg-0 ml-auto mb-5 text-center">
 
                     <!-- Image -->
-                    <img src="{% static 'appv/img/lightbox/004_ecole_du_dimanche_700x300.jpg' %}"
+                    <img src="{{ STATIC_URL|concat_string:'/img/lightbox/004_ecole_du_dimanche_700x300.jpg' }}"
                          class="img-fluid rounded z-depth-0" alt="My photo">
 
                 </div>

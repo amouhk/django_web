@@ -1,12 +1,13 @@
 {% load static %}
+{% load extras %}
 <!-- JQuery -->
-<script type="text/javascript" src="{% static 'appv/js/jquery-3.4.1.min.js' %}"></script>
+<script type="text/javascript" src="{{ STATIC_URL|concat_string:'/js/jquery-3.4.1.min.js' }}"></script>
 <!-- Bootstrap tooltips -->
-<script type="text/javascript" src="{% static 'appv/js/popper.min.js' %}"></script>
+<script type="text/javascript" src="{{ STATIC_URL|concat_string:'/js/popper.min.js' }}"></script>
 <!-- Bootstrap core JavaScript -->
-<script type="text/javascript" src="{% static 'appv/js/bootstrap.min.js' %}"></script>
+<script type="text/javascript" src="{{ STATIC_URL|concat_string:'/js/bootstrap.min.js' }}"></script>
 <!-- MDB core JavaScript -->
-<script type="text/javascript" src="{% static 'appv/js/mdb.min.js' %}"></script>
+<script type="text/javascript" src="{{ STATIC_URL|concat_string:'/js/mdb.min.js' }}"></script>
   <script>
     // Animation init
     new WOW().init();

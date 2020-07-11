@@ -22,7 +22,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '$k$!19o_rv9vn9917$26kp)yp7&(phd6w3g-fpwu_&d=dpz!xp'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = [
     'naskam',
@@ -158,6 +158,10 @@ DATE_FORMAT = "d-m-Y"
 STATIC_URL = '/static/'
 
 STATIC_ROOT = '/share/CACHEDEV1_DATA/Web/static/'
+
+STATIC_SERVER = "http://82.64.149.128"
+STATIC_APP = '/static_app/'
+STATIC_ADMIN = '/static_admin/'
 
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, "static"),

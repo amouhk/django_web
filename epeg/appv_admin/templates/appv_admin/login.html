@@ -1,19 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 {% load static %}
+{% load extras %}
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>Admin - EPE Gobelins </title>
     {% load static %}
-    <link rel="icon" href="{% static 'appv_admin/img/logo/logo_church.png' %}">
+    <link rel="icon" href="{{ STATIC_URL|concat_string:'/img/logo/logo_church.png' }}">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
     <!-- Bootstrap core CSS -->
-    <link rel="stylesheet" href="{% static 'appv_admin/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{{ STATIC_URL|concat_string:'/css/bootstrap.min.css' }}">
     <!-- Material Design Bootstrap -->
-    <link rel="stylesheet" href="{% static 'appv_admin/css/mdb.min.css' %}">
+    <link rel="stylesheet" href="{{ STATIC_URL|concat_string:'/css/mdb.min.css' }}">
     <!-- Your custom styles (optional) -->
     <style>
     html,
@@ -140,13 +141,13 @@
 
 <!-- SCRIPTS -->
 <!-- JQuery -->
-<script type="text/javascript" src="{% static 'appv_admin/js/jquery-3.4.1.min.js' %}"></script>
+<script type="text/javascript" src="{{ STATIC_URL|concat_string:'/js/jquery-3.4.1.min.js' }}"></script>
 <!-- Bootstrap tooltips -->
-<script type="text/javascript" src="{% static 'appv_admin/js/popper.min.js' %}"></script>
+<script type="text/javascript" src="{{ STATIC_URL|concat_string:'/js/popper.min.js' }}"></script>
 <!-- Bootstrap core JavaScript -->
-<script type="text/javascript" src="{% static 'appv_admin/js/bootstrap.min.js' %}"></script>
+<script type="text/javascript" src="{{ STATIC_URL|concat_string:'/js/bootstrap.min.js' }}"></script>
 <!-- MDB core JavaScript -->
-<script type="text/javascript" src="{% static 'appv_admin/js/mdb.min.js' %}"></script>
+<script type="text/javascript" src="{{ STATIC_URL|concat_string:'/js/mdb.min.js' }}"></script>
 
 <!-- Custom scripts -->
 <script>
